@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Two functions which cache inversed matrices and either give back cached matrix
+## of previously inversed matrix, or does inversion of matrix via "solve"
 
-## Write a short comment describing this function
+## This function creates a specific matrix format to be given to cacheSolve
+## in order to calculate it's inversed matrix or retrieves calculated inversed
+## matrix from cache
 
 makeCacheMatrix <- function(x = matrix()) {
     im <- NULL
@@ -18,7 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function checks if x has already been inversed previously
+## if yes it retrieves cached inversed matrix, otherwise it calculates it new
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
